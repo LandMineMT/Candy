@@ -171,7 +171,16 @@ minetest.register_craft({
 minetest.register_craft({
 	output = 'candy:pink_candy 1',
 	recipe = {
-		{'moreores:moreores:copper_lump'},
+		{'moreores:copper_lump'},
+		{'candy:sugar'},
+	}
+})
+
+--Blue Candy
+minetest.register_craft({
+	output = 'candy:blue_candy 1',
+	recipe = {
+		{'moreores:mithril_lump'},
 		{'candy:sugar'},
 	}
 })
