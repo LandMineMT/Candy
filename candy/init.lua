@@ -5,7 +5,7 @@
 
 --------------------------------------------------------------------------------
 
--------------Node Register
+-------------Item Register
 
 --Blue Candy
 minetest.register_node("candy:blue_candy", {
@@ -115,10 +115,63 @@ minetest.register_node("candy:pink_candy", {
 	on_use = minetest.item_eat(6),
 })
 
+--Sugar 
 minetest.register_craftitem("candy:sugar", {
 	description = "Sugar",
 	inventory_image = "sugar.png",
 })
 
------------------------------Node Craft
+-----------------------------Item Craft
 
+--Sugar Craft
+minetest.register_craft({
+	output = 'candy:sugar 4',
+	recipe = {
+		{'default:papyrus'},
+	}
+})
+
+--Dark Candy
+minetest.register_craft({
+	output = 'candy:dark_candy 1',
+	recipe = {
+		{'default:coal_lump'},
+		{'candy:sugar'},
+	}
+})
+
+--Light Candy
+minetest.register_craft({
+	output = 'candy:light_candy 1',
+	recipe = {
+		{'moreores:silver_lump'},
+		{'candy:sugar'},
+	}
+})
+
+--Red Candy
+minetest.register_craft({
+	output = 'candy:red_candy 1',
+	recipe = {
+		{'default:iron_lump'},
+		{'candy:sugar'},
+	}
+})
+
+--Yellow Candy
+minetest.register_craft({
+	output = 'candy:yellow_candy 1',
+	recipe = {
+		{'moreores:gold_lump'},
+		{'candy:sugar'},
+	}
+})
+
+--Pink Candy
+minetest.register_craft({
+	output = 'candy:pink_candy 1',
+	recipe = {
+		{'moreores:moreores:copper_lump'},
+		{'candy:sugar'},
+	}
+})
